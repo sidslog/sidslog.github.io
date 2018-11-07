@@ -3,8 +3,22 @@
 
 <script>
 	function myFunction() {
-	    window.location.href = "https://google.com"
+	    // window.location.href = "https://google.com"
+		var stateObj = { foo: "bar" };
+		history.pushState(stateObj, "test page 2", "123.html")
 	}
+
+
+	var pushState = history.pushState;
+	history.pushState = function () {
+		alert("Push state fired");
+	    pushState.apply(history, arguments);
+	    fireEvents('pushState', arguments);  // Some event-handling function
+	};
+
+
+
 </script>
 
 </html>
+
