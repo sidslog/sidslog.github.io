@@ -11,7 +11,7 @@
 
 	var pushState = history.pushState;
 	history.pushState = function () {
-		window.webkit.messageHandlers.__IOS_BRIDGE__.postMessage(arguments)
+		window.webkit.messageHandlers.__IOS_BRIDGE__.postMessage(JSON.stringify(arguments))
 	    pushState.apply(history, arguments);
 	    // fireEvents('pushState', arguments);  // Some event-handling function
 	};
