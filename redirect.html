@@ -11,12 +11,9 @@
 
 	var pushState = history.pushState;
 	history.pushState = function () {
-//		alert("Push state fired");
-	    pushState.apply(history, arguments);
-	    fireEvents('pushState', arguments);  // Some event-handling function
-		
-		
 		window.webkit.messageHandlers.__IOS_BRIDGE__.postMessage(arguments)
+	    pushState.apply(history, arguments);
+	    // fireEvents('pushState', arguments);  // Some event-handling function
 	};
 
 
