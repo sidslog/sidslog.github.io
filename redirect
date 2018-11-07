@@ -1,0 +1,10 @@
+<html>
+<button onclick="myFunction()">Redirect</button>
+
+<script>
+	function myFunction() {
+	    window.location.href = "https://google.com"
+	}
+</script>
+
+</html>
