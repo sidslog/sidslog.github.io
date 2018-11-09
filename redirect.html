@@ -1,17 +1,43 @@
-<!DOCTYPE html>
 <html>
-<body>
 
-<h2>Redirect to a Webpage</h2>
-<p>The replace() method replaces the current document with a new one:</p>
-
-<button onclick="myFunction()">Replace document</button>
+<p><button onclick="windowLocation()">window.location = "https://www.example.com"</button></p>
+<p><button onclick="locationHref()">window.location.href = "https://www.example.com"</button></p>
+<p><button onclick="locationAssign()">window.location.assign("https://www.example.com")</button></p>
+<p><button onclick="locationReplace()">window.location.replace("https://www.example.com")</button></p>
+<p><button onclick="selfLocation()">self.location = "https://www.example.com"</button></p>
+<p><button onclick="topLocation()">top.location = "https://www.example.com"</button></p>
 
 <script>
-function myFunction() {
-    location.replace("https://www.w3schools.com")
-}
+	function windowLocation() {
+		// Sets the new location of the current window.
+		window.location = "https://www.example.com";
+	}
+	
+	function locationHref() {
+		// Sets the new href (URL) for the current window.
+		window.location.href = "https://www.example.com";
+	}
+	
+	function locationAssign() {
+		// Assigns a new URL to the current window.
+		window.location.assign("https://www.example.com");
+	}
+	
+	function locationReplace() {
+		// Replaces the location of the current window with the new one.
+		window.location.replace("https://www.example.com");
+	}
+	
+	function selfLocation() {
+		// Sets the location of the current window itself.
+		self.location = "https://www.example.com";
+	}
+	
+	function topLocation() {
+		// Sets the location of the topmost window of the current window.
+		top.location = "https://www.example.com";
+	}	
+	
 </script>
 
-</body>
-</html> 
+</html>
